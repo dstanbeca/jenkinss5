@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
     jenkinss5:
-        image: ./jenkins-master
+        build: ./jenkins-master
         container_name: jenkinss5
         networks:
           - jenkins-net
