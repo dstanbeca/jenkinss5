@@ -1,5 +1,4 @@
 FROM docker.io/bitnami/minideb:bullseye
-USER root
 ENV HOME="/" \
     OS_ARCH="amd64" \
     OS_FLAVOUR="debian-11" \
