@@ -1,9 +1,9 @@
 version: '3.7'
 
 services:
-    jenkins:
+    jenkinss5:
         build: ./jenkins-master
-        container_name: jenkins
+        container_name: jenkinss5
         networks:
           - jenkins-net
         restart: always
@@ -12,9 +12,9 @@ services:
         volumes:
           - jenkins-log:/var/log/jenkins
           - jenkins-data:/var/jenkins_home
-    nginx:
+    nginxs5:
         build: ./jenkins-nginx
-        container_name: nginx
+        container_name: nginxs5
         ports:
         - 80:80
         - 443:443
