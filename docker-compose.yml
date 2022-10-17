@@ -2,10 +2,10 @@ version: '3.7'
 
 services:
     jenkinss5:
-        image: jenkins/jenkins:lts
+        image: ./jenkins-master
         container_name: jenkinss5
-        privileged: true
-        user: root
+#        privileged: true
+#        user: root
         networks:
           - jenkins-net
         restart: always
