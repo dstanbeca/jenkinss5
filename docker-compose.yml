@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+    jenkins:
+        build: ./jenkins-master
+        container_name: jenkins
+        networks:
+          - jenkins-net
+        restart: always
+        ports:
+        - 8080:8080
+        volumes:
+          - jenkins-log:/var/log/jenkins
+          - jenkins-data:/var/jenkins_home
+    nginx:
+        build: ./jenkins-nginx
+        container_name: nginx
+        ports:
+        - 80:80
+        - 443:443
+        restart: always
+        networks:
+          - jenkins-net
+
+networks:
+  jenkins-net:
+
+volumes:
+  jenkins-log:
+  jenkins-data:
