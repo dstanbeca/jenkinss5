@@ -28,9 +28,9 @@ services:
         ports:
         - 80:80
         - 443:443
-        restart: always
-        depends_on:
-        - jenkinss5
+#        restart: always
+#        depends_on:
+#        - jenkinss5
         networks:
           - jenkins-net
 
