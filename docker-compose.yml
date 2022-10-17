@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
     jenkinss5:
-        build: ./jenkins-master
+        image: jenkins/jenkins
         container_name: jenkinss5
 #        privileged: true
 #        user: root
