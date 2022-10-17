@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
     jenkinss5:
-        build: ./jenkins-master
+        image: docker.io/bitnami/jenkins:2
         container_name: jenkinss5
         networks:
           - jenkins-net
