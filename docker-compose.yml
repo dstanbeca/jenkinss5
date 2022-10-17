@@ -19,9 +19,9 @@ services:
         links:
           - jenkinss5
         volumes:
-           - type: bind
-             source: ./jenkins-nginx/jenkins.conf
-             target: /etc/nginx/conf.d/default.conf
+          - type: bind
+            source: ./jenkins-nginx/nginx.conf
+            target: /etc/nginx/conf.d/default.conf
         ports:
         - 80:80
         - 443:443
