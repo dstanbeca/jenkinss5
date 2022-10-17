@@ -15,6 +15,10 @@ services:
     nginxs5:
         build: ./jenkins-nginx
         container_name: nginxs5
+        volumes:
+           - type: bind
+             source: ./jenkins-nginx/nginx.conf
+             target: /etc/nginx/conf.d/default.conf
         ports:
         - 80:80
         - 443:443
